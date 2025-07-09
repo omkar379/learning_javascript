@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Inline Example -->
+     <button onclick="alert('Inline Js Example')">Inline JS Click me</button>
+
+     <!-- Internal Js Example -->
+        <button onclick="showmessage()">Internal JS Click me</button>
+         <button onclick="showme()">Internal JS Click me</button>  
+         <button onclick="abcd()"> Click me</button>     
+
+ <script>
+    function showmessage()
+    {
+        alert("Internal JS Example Omkar")
+    }
+     function showme()
+     {
+        alert("Hi Omkar Here")
+     }
+     function abcd()
+     {
+        alert("Submit Successfully")
+     }
+ </script>
+
+ <!-- External Js Example -->
+   <button onclick="om()">External JS Click me</button> 
+   
+   <script type="text/javascript" src="js/script.js"></script>
+
+   <button onclick="jay()">show the message</button>
+
+   <script type="text/javascript" src="js/script.js"></script>
+
+   <!-- document.write example  any tag use in this-->
+       <script>
+         document.write("<h1>Hello its Omkar</h1>");
+          document.write("<h3>Hello How Are You</h3>");
+           document.write("<h3>I Am Fine</h3>");
+            document.write(20+10);
+       </script>
+
+       <!-- console.log example -->
+        <script>
+         console.log("Welcome to College");
+          console.log("Welcome to Our Hotel");
+        </script>
+</body>
+</html>
