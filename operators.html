@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>oprator</title>
+</head>
+<body>
+    <script>
+       var a = 17;  //(+ , - , / , % , ** , * , ++ , -- ,)
+       var b = 3;
+       var c = a + b; //(20)
+       c++;  //(21)+1
+       c--;  //(20)-1
+       c++;  //(21)+1
+       c++;  //(22)+1
+       c++;  //(23)+1     (output=23)
+       document.write(c);
+
+       document.write("<br>");
+    </script>
+
+        <!-- comparition oprator -->
+    <script>
+        var p = "13";
+        var q = 13;
+        if(p===q){
+            document.write("true")
+        }
+           else{
+            document.write("false")
+           }
+           document.write("<br>");
+    </script>
+    
+    <!-- logical oprator -->
+    <script>
+         var age = 19;
+         if(age>=18 && age<=100){
+            document.write("eligible for vote");
+         }
+         else{
+             document.write("not eligible for vote");
+         }
+         document.write("<br>");
+   </script>
+
+   <script>
+    var day = "sunday";
+    if(day==="saturday" || day==="sunday"){
+        document.write("its weekend");
+    }
+    else{
+          document.write("its weekday");
+        }
+         document.write("<br>");
+   </script>
+
+   <!-- ternary oprator -->
+   <script>
+     let age1 = 15;
+     let eligible = (age1>=18)  ? "eligible for vote" :  "not eligible";
+     document.write(eligible);
+   </script>
+</body>
+</html>

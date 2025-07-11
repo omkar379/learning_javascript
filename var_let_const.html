@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>var_let_const</title>
+</head>
+<body>
+   <!-- var -->
+    <!-- redeclaration and reassign -->
+    <script>
+        var fname = "Omkar";
+        var fname = "Ram";
+        document.write(fname);
+    </script>
+  <br> <br>
+    <!-- let -->
+     <!-- only redclare -->
+     <script>
+        let lname="Patil";
+        lname="Shyam";
+        document.write(lname);
+     </script>
+  <br> <br>
+   <!-- const -->
+    <!-- fix no change -->
+  <script>
+       const pi=3.14;
+ 
+       document.write(pi);
+  </script>
+  <br> <br>
+
+  <script>
+    function example(){
+         var x = 1;
+         let y = 2;
+         const z = 3;
+
+         if (true)
+         {
+            var x = 10;
+            let y = 20;
+            const z = 30;
+            document.write("<br>");
+            document.write(x + " " + y + " " + z);  //10 20 30
+            document.write("<br>");
+         }
+            document.write(x + " " + y + " " + z);  //10 2 3
+
+    }
+    example();
+  </script>
+
+</body>
+</html>
