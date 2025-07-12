@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array methods</title>
+</head>
+<body>
+     <script>
+        var a =["Om",22,"Male","BCA"];
+        document.write(a + "<br>");
+
+        a[1] = 23;
+        document.write(a + "<br>");
+
+          a[0] = "Ram";
+        document.write(a + "<br>");
+
+          a[3] = "BBA";
+        document.write(a + "<br>");
+     </script>
+     <br><br>
+
+     <!-- sorting and reverse -->
+      <script>
+         var b = ["Om","Ram","Rajesh","Sahil","Sangram","Geeta"];
+         document.write(b + "<br>");
+
+         b.sort();
+         document.write(b + "<br>");
+
+         b.reverse();
+         document.write( b + "<br>");
+      </script>
+      <br><br>
+       
+     <!-- pop and push  (pop = last names delete , push = last name add)--> 
+      <script>
+         var c = ["Om","Ram","Rajesh","Sahil","Sangram","Geeta"];
+         document.write(c + "<br>");
+
+          c.pop();
+          c.pop();
+          document.write(c + "<br>");
+
+          c.push("Krishi");
+          document.write(c + "<br>");
+
+      </script>
+      <br><br>
+
+       <!-- shift unshift  (shift = first name delete , unshift = first name add)-->
+      <script>
+              var d = ["Om","Ram","Rajesh","Sahil","Sangram","Geeta"];
+              document.write(d + "<br>");
+
+              d.shift();
+              document.write(d + "<br>");
+
+              d.unshift("lg");
+              document.write(d + "<br>");
+      </script>
+      <br><br>
+
+       <!-- concate and join -->
+      <script>
+            var x = ["Om","Ram","Rajesh","Sahil","Sangram","Geeta"];
+              var y = ["Yash","Mahesh","Sunil","Vishal","Virat","Adarsh"];
+
+              var z = x.concat(y);
+              document.write(z + "<br>");
+
+              var d = z.join("/");
+              document.write(d + "<br>");
+      </script>
+</body>
+</html>

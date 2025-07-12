@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>key events</title>
+    </head>
+    <!-- onresize="hello()"  onkeypress="hello()"  onscroll="hello()" -->
+    <!-- oncontextmenu="return false"(right click off)  onselectstart="return false"(copy text off) -->
+    <body oncontextmenu="return false" onselectstart="return false">
+
+        <!-- single click -->
+        <button onclick="hello()">Single Click</button>
+        <br> <br>
+
+        <!-- double click -->
+        <button ondblclick="hello()">Double Click</button>
+        <br> <br>
+
+        <!--on right click -->
+        <button oncontextmenu="hello()"> On Right Click</button>
+        <br> <br>
+
+        <!-- on mouse enter -->
+        <button onmouseenter="hello()"> On Mouse Enter</button>
+        <br><br>
+
+        <!-- on mouse out -->
+        <button onmouseout="hello()"> On Mouse Out</button>
+        <br> <br>
+
+        <h1>Hello</h1> <h1>Hello</h1> <h1>Hello</h1> <h1>Hello</h1>
+        <h1>Hello</h1> <h1>Hello</h1> <h1>Hello</h1> <h1>Hello</h1>
+        <h1>Hello</h1> <h1>Hello</h1> <h1>Hello</h1> <h1>Hello</h1>
+        <h1>Hello</h1> <h1>Hello</h1>
+        <script>
+    function hello(){
+        alert("hello, how are you?");
+    }     
+ </script>
+    </body>
+</html>
