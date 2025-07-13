@@ -33,7 +33,8 @@
            document.write("<br>");
     </script>
     
-    <!-- logical oprator -->
+    <!-- logical && oprator ( && both condition true) -->
+     <!-- run only when both conditions must be true -->
     <script>
          var age = 19;
          if(age>=18 && age<=100){
@@ -44,7 +45,11 @@
          }
          document.write("<br>");
    </script>
+      <br><br>
 
+
+      <!-- logical OR oprator || (one condition on true) -->
+       <!-- run only when either one condition may be true  -->
    <script>
     var day = "sunday";
     if(day==="saturday" || day==="sunday"){
@@ -55,6 +60,7 @@
         }
          document.write("<br>");
    </script>
+    <br>
 
    <!-- ternary oprator -->
    <script>
@@ -62,5 +68,21 @@
      let eligible = (age1>=18)  ? "eligible for vote" :  "not eligible";
      document.write(eligible);
    </script>
+    <br> <br>
+
+
+   <!--logical not oprator !(condition ) -->
+    <!-- true = false ,  false = true -->
+     <script>
+        var a = 10;
+        var b = 5;
+
+        if (!a >= 7){
+            document.write("yes it is true");
+        }
+        else{
+           document.write("no its false");
+        }
+     </script>
 </body>
 </html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>validation form</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+            rel="stylesheet">
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+        <script type="text/javascript" src="js/script.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <form id="contactform" class="p4 border rounded" onsubmit="return validate()">
+                    <h2>Contact Us</h2>
+                    <div class="row border border-primary p-5">
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1"
+                                    class="form-label">Enter Name</label>
+                                <input type="text" class="form-control"
+                                    id="name" name="name"
+                                    placeholder="Enter Name">
+                                    <span class="text-danger" id="nameError"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1"
+                                    class="form-label">Enter Email</label>
+                                <input type="text" class="form-control"
+                                    id="email" name="email"
+                                    placeholder="Enter Email">
+                                     <span class="text-danger" id="emailError"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1"
+                                    class="form-label">Enter Phone
+                                    Number</label>
+                                <input type="number" class="form-control"
+                                    id="mobilenumber" name="phone number"
+                                    placeholder="Enter Phone Number">
+                                     <span class="text-danger" id="mobileError"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="exampleFormControlTextarea1"
+                                    class="form-label">Message</label>
+
+                                <textarea class="form-control"
+                                    id="message" name="message"
+                                    rows="3">Your Message</textarea>
+                                     <span class="text-danger" id="messageError"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-3 m-auto height">
+                            <button type="submit"
+                                class="btn btn-success large">Submit</button>
+                        </div>
+                    </div>
+                </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- bootstrap and js dependencies -->
+         <script>
+            function validate() {
+                // get form values
+                const name = document.getElementById("name").value.trim();
+                 const email = document.getElementById("email").value.trim();
+                  const phone = document.getElementById("mobilenumber").value.trim();
+                   const message = document.getElementById("message").value.trim();
+
+                   //error span
+                   const nameError = document.getElementById("nameError");
+                    const emailError = document.getElementById("emailError");
+                     const mobileError = document.getElementById("mobileError");
+                      const messageError = document.getElementById("messageError");
+
+                      //clear previous error
+                      nameError.textContent = "";
+                       emailError.textContent = "";
+                        mobileError.textContent = "";
+                         messageError.textContent = "";
+
+                         let isvalid = true;
+
+                         //valid fields
+                         if (name === ""){
+                            nameError.textContent= "Please enter your name.";
+                            isvalid = false;
+                         } else if (name.length<3){
+                              nameError.textContent= "name must be at least 3 char.";
+                              isvalid = false;
+                         }
+                         if (email === ""){
+                             emailError.textContent= "Please enter email name.";
+                            isvalid = false;
+                         } else if("^[a-zA-Z0-9_+&*-]+(?:\\.[a-zA-Z0-9_+&*-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,7}$.test(emial)"){
+                            emailError.textContent = "please enter valid email";
+                            isvalid = false; 
+                         }
+                         if (phone === ""){
+                             mobileError.textContent= "enter your mobile number";
+                              isvalid = false;
+                         } else if ("^/d(?:-/d{3}){3}/d$.test(phone)"){
+                            mobileError.textContent = "enter valid 10 digit mobile number.";
+                            isvalid = false; 
+                         }
+                         if(message === ""){
+                              messageError.textContent= "Please enter yor message.";
+                            isvalid = false;
+                         }
+
+                         if (isvalid) {
+                            alert("form submitted successfully!");
+                         }
+
+                         return isvalid; // prevent form submission if invalid
+            }
+         </script>
+    </body>
+</html>
